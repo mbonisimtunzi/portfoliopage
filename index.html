@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-yYoF1FAPTXJbFhyAb2wbpeu/OrG8jkxgY1+QxcDxVt+2/K6f7mDe1aAsuWEmKv5JM2DTgQ7ZkRK6DIHac5pNhw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #008073;
+            color: white;
+        }
+        header {
+            background-color: #008073;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .hero {
+            background-image: url('image.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+        .hero button {
+            background-color: #008073;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .hero button:hover {
+            background-color: #005951;
+        }
+        section.about {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 50px 0;
+            background-color: white;
+            color: black;
+        }
+        .about .text {
+            width: 50%;
+            padding: 0 20px;
+        }
+        .about .text h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .about .text p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        .about .image {
+            width: 50%;
+            text-align: center;
+        }
+        .about .image img {
+            max-width: 100%;
+            border-radius: 50%;
+        }
+        section.skills {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .skills h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: white;
+        }
+        .skills .container {
+            display: inline-block;
+            width: calc(25% - 20px);
+            margin: 10px;
+            vertical-align: top;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .skills .container .icon {
+            font-size: 3em;
+            color: #008073;
+        }
+        .skills .container h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #008073;
+        }
+        .skills .container p {
+            font-size: 1.2em;
+            line-height: 1.5;
+            color: #008073;
+        }
+        section.projects {
+            padding: 50px 0;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background-color: white;
+        }
+        .projects h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            width: 100%;
+            color: black;
+        }
+        .projects .container {
+            width: calc(50% - 20px);
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+        }
+        .projects .container img {
+            max-width: 150px;
+            border-radius: 10px;
+        }
+        .projects .container .content {
+            flex: 1;
+            padding-left: 20px;
+            color: black;
+            text-align: left;
+        }
+        .projects .container h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: black;
+        }
+        .projects .container p {
+            font-size: 1.2em;
+            line-height: 1.5;
+            color: black;
+        }
+        section.contact {
+            padding: 50px 0;
+            text-align: center;
+            background-color: #005951;
+            color: white;
+        }
+        .contact h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+        .contact .container {
+            display: inline-block;
+            margin: 20px;
+            text-align: left;
+        }
+        .contact .container i {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+        .contact .container p {
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+
+
+
+       
+    /* Base styles remain the same */
+
+    @media screen and (max-width: 768px) {
+        /* Adjustments for smaller screens */
+
+        .about, .skills, .projects, .contact {
+            flex-direction: column;
+        }
+
+        .hero h1 {
+            font-size: 2em;
+        }
+
+        .hero p {
+            font-size: 1em;
+        }
+
+        .hero button {
+            font-size: 1em;
+        }
+
+        .about, .skills, .projects, .contact {
+            padding: 30px 0;
+        }
+
+        .about .text, .about .image {
+            width: 100%;
+        }
+
+        .about .text {
+            padding: 0 10px;
+        }
+
+        .about .image {
+            text-align: center;
+        }
+
+        .about .image img {
+            max-width: 70%;
+        }
+
+        .skills .container {
+            width: 90%;
+        }
+
+        .projects .container, .contact .container {
+            width: 90%;
+            margin: 10px auto;
+        }
+
+        .projects .container img {
+            max-width: 100%;
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+    </header>
+    <section class="hero">
+        <h1>Vongai Mubvumbu</h1>
+        <p>ICT Professional</p>
+        <button>Contact Me</button>
+    </section>
+    <section class="about">
+        <div class="text">
+            <h2>About Me</h2>
+            <p>I am a professional web developer with a degree in ICT. I am passionate about creating elegant solutions to complex problems. My journey in the field of web development began with a deep curiosity and has since evolved into a career where I continually seek to learn and grow.</p>
+            <!-- Add more information as needed -->
+        </div>
+        <div class="image">
+            <img src="self.jpg" alt="Your Image">
+        </div>
+    </section>
+    <section class="skills">
+        <h2>Skills</h2>
+        <div class="container">
+            <i class="fab fa-html5 icon"></i>
+            <h3>HTML5</h3>
+            <p>Proficient in creating semantically correct and responsive web pages using HTML5.</p>
+        </div>
+        <div class="container">
+            <i class="fab fa-css3-alt icon"></i>
+            <h3>CSS3</h3>
+            <p>Skilled in styling web pages using CSS3 including animations and transitions.</p>
+        </div>
+        <div class="container">
+            <i class="fab fa-js-square icon"></i>
+            <h3>JavaScript</h3>
+            <p>Experience in building dynamic and interactive web applications using JavaScript.</p>
+        </div>
+        <div class="container">
+            <i class="fab fa-react icon"></i>
+            <h3>React.js</h3>
+            <p>Familiar with building single-page applications using React.js framework.</p>
+        </div>
+        <div class="container">
+            <i class="fab fa-node-js icon"></i>
+            <h3>Node.js</h3>
+            <p>Knowledgeable in building server-side applications using Node.js.</p>
+        </div>
+        <div class="container">
+            <i class="fab fa-python icon"></i>
+            <h3>Python</h3>
+            <p>Proficient in Python programming language and its applications in web development.</p>
+        </div>
+        <div class="container">
+            <i class="fas fa-database icon"></i>
+            <h3>SQL</h3>
+            <p>Experience in working with relational databases and writing SQL queries.</p>
+        </div>
+        <div class="container">
+            <i class="fab fa-git-alt icon"></i>
+            <h3>Git</h3>
+            <p>Familiar with version control system Git for collaborative and efficient development.</p>
+        </div>
+    </section>
+    <section class="projects">
+        <h2>Projects</h2>
+        <div class="container">
+            <img src="sample.jpg" alt="Project 1">
+            <div class="content">
+                <h3>Project 1</h3>
+                <p>Description of project 1 goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget tellus a velit aliquet consequat.</p>
+            </div>
+        </div>
+        <div class="container">
+            <img src="sample.jpg" alt="Project 2">
+            <div class="content">
+                <h3>Project 2</h3>
+                <p>Description of project 2 goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget tellus a velit aliquet consequat.</p>
+            </div>
+        </div>
+        <div class="container">
+            <img src="sample.jpg" alt="Project 3">
+            <div class="content">
+                <h3>Project 3</h3>
+                <p>Description of project 3 goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget tellus a velit aliquet consequat.</p>
+            </div>
+        </div>
+        <div class="container">
+            <img src="sample.jpg" alt="Project 4">
+            <div class="content">
+                <h3>Project 4</h3>
+                <p>Description of project 4 goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget tellus a velit aliquet consequat.</p>
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+        <h2>Contact Information</h2>
+        <div class="container">
+            <i class="fas fa-envelope"></i>
+            <p>Email: example@example.com</p>
+        </div>
+        <div class="container">
+            <i class="fas fa-phone"></i>
+            <p>Phone: +1234567890</p>
+        </div>
+        <div class="container">
+            <i class="fab fa-linkedin"></i>
+            <p>LinkedIn: linkedin.com/example</p>
+        </div>
+        <div class="container">
+            <i class="fab fa-github"></i>
+            <p>GitHub: github.com/example</p>
+        </div>
+    </section>
+</body>
+</html>
